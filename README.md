@@ -3,6 +3,12 @@
 ## Project Overview
 Automated the creation and configuration of a secure, scalable Virtual Private Cloud (VPC) in AWS using CLI commands, ensuring seamless internet connectivity and resource isolation for cloud applications.
 
+## Project Demo
+
+You can see a detailed walkthrough of this project on my portfolio:
+
+[Project on Portfolio](https://kcanzateraws.github.io/KCanzaterAWS/AWSCLI.html)
+
 ## Technologies Used
 - AWS CLI
 - Amazon VPC (Virtual Private Cloud)
