@@ -12,7 +12,7 @@ This project demonstrates how to **automate the creation and validation of a sec
 
 ## Skills Demonstrated (QA-Related):
 
--Automated infrastructure provisioning via AWS CLI
+- Automated infrastructure provisioning via AWS CLI
 - Validated network connectivity and resource accessibility
 - Applied repeatable, auditable workflows for cloud environment setup
 - Configured security and access rules to prevent misconfigurations
