@@ -1,69 +1,27 @@
-# Building and Securing a Scalable VPC with AWS CLI
+# 🔐 Automated & Secure VPC Deployment with AWS CLI (QA Perspective)
 
 ## Project Overview
-Automated the creation and configuration of a secure, scalable Virtual Private Cloud (VPC) in AWS using CLI commands, ensuring seamless internet connectivity and resource isolation for cloud applications.
+This project demonstrates how to **automate the creation and validation of a secure, scalable AWS Virtual Private Cloud (VPC)** using AWS CLI commands. The focus is on **ensuring reliable infrastructure setup, repeatable deployment, and correct configuration**, aligning cloud skills with QA principles.
 
-## Project Demo
+## QA-Relevant Goals:
 
-You can see a detailed walkthrough of this project on my portfolio:
+- Verify correct creation of VPC, subnets, route tables, and internet gateways
+- Ensure security groups and access controls are consistently applied
+- Automate deployment steps to reduce human error and improve reproducibility
+- Document outcomes for auditing, validation, and troubleshooting
 
-[Project on Portfolio](https://kcanzateraws.github.io/KCanzaterAWS/AWSCLI.html)
+## Skills Demonstrated (QA-Related):
 
-## Technologies Used
-- AWS CLI
-- Amazon VPC (Virtual Private Cloud)
-- Internet Gateway
-- Subnets
-- Route Tables
-- Security Groups
+-Automated infrastructure provisioning via AWS CLI
+- Validated network connectivity and resource accessibility
+- Applied repeatable, auditable workflows for cloud environment setup
+- Configured security and access rules to prevent misconfigurations
+- Tracked deployment steps and results for process documentation
 
-## Project Details
-**Status**: Completed
+## Tech Stack:
+- AWS CLI | Amazon VPC | Subnets | Internet Gateway | Route Tables | Security Groups
 
-### Architecture Overview
-This project leverages Amazon VPC and AWS CLI to create a secure and scalable cloud environment with internet access. The automated setup includes:
-
-- **VPC**: Acts as a private network to house your resources in a secure environment.
-- **Subnets**: A public subnet for resources that need internet access (like EC2 instances).
-- **Internet Gateway**: Enables communication between the resources in the VPC and the internet.
-- **Route Table**: Directs traffic within the VPC and allows internet access through the Internet Gateway.
-- **Security Groups**: Provides security and access controls for resources within the VPC.
-
-This architecture, automated through AWS CLI, allows for rapid deployment and efficient management of cloud networks while ensuring security and scalability.
-
-### Implementation Steps
-1. **Create a Virtual Private Cloud (VPC)**
-    - Command:
-    ```bash
-    aws ec2 create-vpc --cidr-block 10.0.0.0/16
-    ```
-    - Result: Successfully created VPC with ID `vpc-0a407c238e2a3c8aa`.
-
-2. **Set Up a Subnet**
-    - Command:
-    ```bash
-    aws ec2 create-subnet --vpc-id vpc-0a407c238e2a3c8aa --cidr-block 10.0.1.0/24
-    ```
-    - Result: Successfully created Subnet with ID `subnet-01ae8fc8816f25db1`.
-
-3. **Attach an Internet Gateway**
-    - Command:
-    ```bash
-    aws ec2 create-internet-gateway
-    aws ec2 attach-internet-gateway --internet-gateway-id igw-046fc5bc242644a8a --vpc-id vpc-0a407c238e2a3c8aa
-    ```
-    - Result: Successfully attached Internet Gateway with ID `igw-046fc5bc242644a8a`.
-
-4. **Update Route Table for Internet Access**
-    - Command:
-    ```bash
-    aws ec2 create-route --route-table-id rtb-xxxxx --destination-cidr-block 0.0.0.0/0 --gateway-id igw-046fc5bc242644a8a
-    ```
-    - Result: Internet access for the VPC is now configured.
-
-5. **VPC Fully Connected to the Internet**
-    - Result: Your VPC is now fully internet-enabled, allowing seamless communication with external resources.
-
-## Project Results
-The automated VPC setup using AWS CLI successfully created a secure and scalable cloud network. With subnets, an Internet Gateway, and route table updates, the environment supports seamless communication for cloud resources while maintaining security and scalability.
-
+## Impact / QA Takeaway:
+- Highlights ability to **design repeatable and validated infrastructure processes**
+- Demonstrates **process-oriented thinking**, a key QA mindset
+- Prepares for QA-style tasks such as **configuration testing, regression checks, and automated verification**
